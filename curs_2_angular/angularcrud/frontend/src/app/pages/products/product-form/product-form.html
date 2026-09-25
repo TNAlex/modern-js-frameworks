@@ -1,0 +1,61 @@
+<section class="card shadow-sm">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="mb-0">{{ title }}</h2>
+            <a class="btn btn-outline-secondary" routerLink="/products">Inapoi la produse</a>
+        </div>
+
+        @if (error) {
+        <div class="alert alert-danger" role="alert">{{ error }}</div>
+        }
+
+        @if (loading) {
+        <div class="text-center py-4">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+        } @else {
+        <form [formGroup]="form" (ngSubmit)="submit()" class="row g-3">
+            <div class="col-12">
+                <label for="name" class="form-label">Nume produs</label>
+                <input id="name" type="text" class="form-control" formControlName="name" />
+            </div>
+
+            <div class="col-12 col-md-6">
+                <label for="price" class="form-label">Pret</label>
+                <input id="price" type="text" class="form-control" formControlName="price" />
+            </div>
+
+            <div class="col-12 col-md-6">
+                <label for="rating" class="form-label">Rating (0-5)</label>
+                <div id="rating" class="pt-2">
+                    <p-rating formControlName="rating"></p-rating>
+                </div>
+                <small class="text-muted d-block mt-1">Valoare selectata: {{ form.value.rating ?? 0 }}/5</small>
+            </div>
+
+            <div class="col-12">
+                <label for="image" class="form-label">URL imagine</label>
+                <input id="image" type="text" class="form-control" formControlName="image" />
+            </div>
+
+            <div class="col-12">
+                <div class="preview border rounded p-2 bg-light" *ngIf="form.value.image">
+                    <img [src]="resolveImageUrl(form.value.image)" alt="Preview" class="img-fluid rounded" />
+                </div>
+            </div>
+
+            @if (mode === 'view') {
+            <div class="col-12 d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-warning" (click)="enableEditMode()">Editare</button>
+            </div>
+            } @else {
+            <div class="col-12 d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-primary" [disabled]="submitting">
+                    {{ submitting ? 'Se salveaza...' : mode === 'create' ? 'Creeaza produs' : 'Salveaza modificarile' }}
+                </button>
+            </div>
+            }
+        </form>
+        }
+    </div>
+</section>

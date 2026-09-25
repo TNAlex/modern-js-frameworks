@@ -1,0 +1,19 @@
+<header class="app-header shadow-sm">
+    <nav class="navbar navbar-dark bg-primary py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" routerLink="/">Fashion Catalog</a>
+
+            <ul class="navbar-nav flex-row gap-3 ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products" routerLinkActive="active">Produse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #fff;
+}

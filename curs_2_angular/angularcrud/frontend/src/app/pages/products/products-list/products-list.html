@@ -1,0 +1,51 @@
+<section class="d-flex align-items-center justify-content-between mb-3">
+    <div>
+        <h2 class="mb-0">Produse</h2>
+        <small class="text-muted">Total: {{ total }}</small>
+    </div>
+    <a class="btn btn-success" routerLink="/products/new">Adauga produs</a>
+</section>
+
+@if (error) {
+<div class="alert alert-danger" role="alert">{{ error }}</div>
+}
+
+@if (loading) {
+<div class="text-center py-5">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+} @else {
+<div class="row g-3">
+    @for (product of products; track product.id) {
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+            <img [src]="resolveImageUrl(product.image)" [alt]="product.name" class="card-img-top product-image" />
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text mb-1"><strong>Pret:</strong> {{ product.price }}</p>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <strong>Rating:</strong>
+                    <p-rating [ngModel]="product.rating" [readonly]="true"></p-rating>
+                    <span class="small text-muted">({{ product.rating }}/5)</span>
+                </div>
+                <div class="mt-auto d-grid gap-2">
+                    <a class="btn btn-outline-primary btn-sm" [routerLink]="['/products', product.id]">Vizualizare</a>
+                    <a class="btn btn-outline-warning btn-sm"
+                        [routerLink]="['/products', product.id, 'edit']">Editare</a>
+                    <button class="btn btn-outline-danger btn-sm" [disabled]="deletingId === product.id"
+                        (click)="deleteProduct(product)">
+                        {{ deletingId === product.id ? 'Se sterge...' : 'Stergere' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+<div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+    <button class="btn btn-secondary" [disabled]="page === 0" (click)="previousPage()">Anterior</button>
+    <span>Pagina {{ page + 1 }} din {{ totalPages || 1 }}</span>
+    <button class="btn btn-secondary" [disabled]="page >= totalPages - 1" (click)="nextPage()">Urmator</button>
+</div>
+}

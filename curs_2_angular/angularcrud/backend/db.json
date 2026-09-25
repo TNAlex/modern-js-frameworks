@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "image": "assets/images/products/image1.jpg",
+      "name": "Black Hoodie Editat din vue si angular si react",
+      "price": "20",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "name": "Branded Shoes",
+      "image": "assets/images/products/image2.jpg",
+      "price": "13.5",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "image": "assets/images/products/image3.jpg",
+      "name": "White",
+      "price": "85.0",
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "image": "assets/images/products/image4.jpg",
+      "name": "Gray Dress 1",
+      "price": "625",
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "name": "Black T-Shirt (Mens)",
+      "image": "assets/images/products/image5.jpg",
+      "price": "55.0",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "image": "assets/images/products/image6.jpg",
+      "name": "Jeans Jacket Blue",
+      "price": "115.0",
+      "rating": 1
+    },
+    {
+      "id": 7,
+      "name": "Black T-Shirt (Womens)",
+      "image": "assets/images/products/image7.jpg",
+      "price": "25.0",
+      "rating": 3
+    },
+    {
+      "id": 8,
+      "name": "Beige Trench Coat",
+      "image": "assets/images/products/image8.jpg",
+      "price": "52.0",
+      "rating": 1
+    },
+    {
+      "id": 9,
+      "name": "Stylish Shoes",
+      "image": "assets/images/products/image9.jpg",
+      "price": "32.0",
+      "rating": 2
+    },
+    {
+      "id": 10,
+      "name": "Stylish Shoes - B",
+      "image": "assets/images/products/image10.jpg",
+      "price": "55.0",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "name": "Beanie Black",
+      "image": "assets/images/products/image11.jpg",
+      "price": "15.0",
+      "rating": 1
+    },
+    {
+      "id": 12,
+      "name": "Beanie Orange",
+      "image": "assets/images/products/image12.jpg",
+      "price": "12.5",
+      "rating": 2
+    },
+    {
+      "id": 13,
+      "name": "Beanie Red",
+      "image": "assets/images/products/image13.jpg",
+      "price": "14.5",
+      "rating": 4
+    },
+    {
+      "id": 15,
+      "name": "Cyan Long Sleeve Shirt",
+      "image": "assets/images/products/image15.jpg",
+      "price": "15.5",
+      "rating": 5
+    },
+    {
+      "id": 16,
+      "name": "Yellow Raincoat",
+      "image": "assets/images/products/image16.jpg",
+      "price": "12.5",
+      "rating": 3
+    },
+    {
+      "id": 17,
+      "name": "Yellow DReesss",
+      "image": "assets/images/products/image16.jpg",
+      "price": "1211.5",
+      "rating": 3
+    },
+    {
+      "id": 18,
+      "image": "https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjplnld3gptkremcqom5q.png",
+      "name": "Produs nou adaugat din react",
+      "price": "1111",
+      "rating": 2
+    },
+    {
+      "id": 19,
+      "image": "/assets/images/products/test.png",
+      "name": "produs img locala",
+      "price": "12",
+      "rating": 3
+    }
+  ]
+}
